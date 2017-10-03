@@ -52,6 +52,7 @@ elif response_level == "3":
 elif response_level == "4":
 	print "Patient is unconscious."
 
+## this doesn't work right now! 
 if respiratory_rate <5 and systolic_pressure <70 and heart_rate <40 and urine_output <60 and response_level == "4":
 	print "Sepsis warning level is high - antibiotics required urgently."
 elif respiratory_rate >5 and respiratory_rate >8 and systolic_pressure >70 and systolic_pressure <79 and heart_rate >40 and heart_rate <49 and urine_output >60 and urine_output <79 and response_level == "3":
