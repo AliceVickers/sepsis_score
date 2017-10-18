@@ -9,7 +9,7 @@ def hello_someone():
     return "hello world"
 
 @app.route("/symptomchecker")
-def hello_someone():
+def symptomchecker():
     return render_template("project.html")
 
 if __name__ == '__main__':
