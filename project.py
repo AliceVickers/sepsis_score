@@ -13,7 +13,8 @@ consciousness = int(raw_input("""State the level of consciousness:
 2 - Pain
 3 - Agitation/Confusion
 4 - Voice
-5 - Alert """))
+5 - Alert
+ """))
 
 print """\nPATIENT REPORT:
 This patient has a respiratory rate of %r breaths per minute,
