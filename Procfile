@@ -1,1 +1,1 @@
-web: gunicorn sepsis.wsgi --log-file -
+web: gunicorn wsgi:app --log-file=-
