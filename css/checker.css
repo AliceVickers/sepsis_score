@@ -1,5 +1,6 @@
 input [type=number]{
   width: 100%;
+  font-family: 'Droid Serif', serif;
 }
 
 input[type=text] {
@@ -7,6 +8,7 @@ input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+    font-family: 'Droid Serif', serif;
 }
 
 input[type=text]:focus {
@@ -21,4 +23,14 @@ input[type=button], input[type=submit], input[type=reset] {
     text-decoration: none;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+p {
+  font-family: 'Droid Serif', serif;
+  font-size: 60px;
+  background-color: #d2d6d8;
+}
+
+form {
+  font-family: 'Droid Serif', serif;
 }
