@@ -2,36 +2,40 @@
 
 <html>
   <head>
-    <title> Sepsis Symptom Checker </title>
-    <link rel="stylesheet" type="text/css" href="checker.css">
+    <title>Sepsis Symptom Checker</title>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/icons.css">
+    <link rel="stylesheet" href="../css/responsee.css">
   </head>
 
   <body>
-    <p>Sepsis Symptom Checker</p>
-      <div id="symptom-checker">
+    <h1>Sepsis Symptom Checker</h1>
+    <div id="symptom-checker">
         <form method="post" action="/symptomchecker">
-            <label for="systolic_pressure">Systolic blood pressure (mmHg):</label>
-            <input type="systolic_pressure" id="systolic_pressure" name="systolic_pressure" required="required"></br></br>
-            <label for="heart_rate">Heart rate (bpm):</label>
-            <input type="heart_rate" id="heart_rate" name="heart_rate" required="required"></br></br>
-            <label for="body_temperature">Body temperature (Celsius):</label>
-            <input type="body_temperature" id="body_temperature" name="body_temperature" required="required"></br></br>
-            <label for="respiratory_rate">Respiratory rate (breaths/min):</label>
-            <input type="respiratory_rate" id="respiratory_rate" name="respiratory_rate" required="required"></br></br>
-            <label for="urine_output">Urine output (millilitres):</label>
-            <input type="urine_output" id="urine_output" name="urine_output" required="required"></br></br>
-            <label for="consciousness">Level of consciousness:</label></br>
-            <input type="radio" name="consciousness" value="Unresponsive" checked>Unresponsive<br>
-            <input type="radio" name="consciousness" value="Pain" checked>Pain<br>
-            <input type="radio" name="consciousness" value="Agitation/Confusion" checked>Agitation/Confusion</br></br>
-            <input type="radio" name="consciousness" value="Voice" checked>Voice</br></br>
-            <input type="radio" name="consciousness" value="Alert" checked>Alert</br></br>
             <label for="name">Name of patient:</label>
-            <input type="name" id="name" name="name" required="required"></br></br>
+                <input type="name" id="name" name="name" required="required"></br></br>
             <label for="admission">Date of hospital admission:</label>
-            <input type="date" id="admission" name="admission" required="required"></br></br>
+                <input type="date" id="admission" name="admission" required="required"></br></br>
+            <label for="systolic_pressure">Systolic blood pressure (mmHg):</label>
+                <input type="systolic_pressure" id="systolic_pressure" name="systolic_pressure" required="required"></br></br>
+            <label for="heart_rate">Heart rate (bpm):</label>
+                <input type="heart_rate" id="heart_rate" name="heart_rate" required="required"></br></br>
+            <label for="body_temperature">Body temperature (Celsius):</label>
+                <input type="body_temperature" id="body_temperature" name="body_temperature" required="required"></br></br>
+            <label for="respiratory_rate">Respiratory rate (breaths/min):</label>
+                <input type="respiratory_rate" id="respiratory_rate" name="respiratory_rate" required="required"></br></br>
+            <label for="urine_output">Urine output (millilitres):</label>
+                <input type="urine_output" id="urine_output" name="urine_output" required="required"></br></br>
+            <label for="consciousness">Level of consciousness: </label></br>
+                <input type="radio" name="consciousness" value="Unresponsive" checked>Unresponsive<br>
+                <input type="radio" name="consciousness" value="Pain" checked>Pain<br>
+                <input type="radio" name="consciousness" value="Agitation/Confusion" checked>Agitation/Confusion</br></br>
+                <input type="radio" name="consciousness" value="Voice" checked>Voice</br></br>
+                <input type="radio" name="consciousness" value="Alert" checked>Alert</br></br>
             <input type="submit" value="Submit" id="submit-button">
         </form>
-      </div>
+  </div>
+
+    <img src="sepsis_table.jpg" alt="Image of Sepsis Chart">
     </body>
 </html>
