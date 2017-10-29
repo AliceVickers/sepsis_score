@@ -26,10 +26,25 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 p {
-  font-family: 'Droid Serif', serif;
   font-size: 60px;
 }
 
-form {
-  font-family: 'Droid Serif', serif;
+form#formset {
+    width: 360px;
+    margin: 0 auto;
+    text-align: left;
+    color:#fff;
+}
+
+form#formset fieldset {
+    margin: 0 0 1em 0;
+    padding: 1.5em 1.5em 0 1.5em;
+    border: #DDD 1px solid;
+}
+
+body {
+    font: 12px/14px Arial, Helvetica, sans-serif;
+    background-color:#07A;
+    text-align: center;
+    margin:20px 0;
 }
