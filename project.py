@@ -4,9 +4,9 @@ heart_rate = int(raw_input("What is the heart rate (bpm)? "))
 
 body_temperature = int(raw_input("What is the body temperature (Celsius)? "))
 
-respiratory_rate = int(raw_input("What is the respiratory rate? "))
+respiratory_rate = int(raw_input("What is the respiratory rate? (breaths/minute) "))
 
-urine_output = int(raw_input("What is the 4 hour urine output? "))
+urine_output = int(raw_input("What is the 4 hour urine output (millilitres)? "))
 
 consciousness = int(raw_input("""State the level of consciousness:
 1 - Unresponsive
@@ -17,35 +17,47 @@ consciousness = int(raw_input("""State the level of consciousness:
  """))
 
 print """\nPATIENT REPORT:
-This patient has a respiratory rate of %r breaths per minute,
-a systolic blood pressure of %r mmHg,
-a heart rate of %r bpm, a body temeprature of %r Celsius,
-a urine output of %r every 4 hours
-and has a response level of %r.\n""" % (
-	respiratory_rate, systolic_pressure,
-	heart_rate, body_temperature, urine_output, consciousness)
+This patient has a systolic blood pressure of %r mmHg,
+a heart rate of %r bpm, a body temperature of %r degrees Celsius, a respiratory rate of %r breaths per minute, a urine output of %r millitres every 4 hours
+and has a response level of %r.\n""" % (systolic_pressure, heart_rate, body_temperature, respiratory_rate, urine_output, consciousness)
+
+if systolic_pressure < 89:
+    print "Blood pressure is low."
+elif systolic_pressure > 90 and systolic_pressure < 120:
+    print "Blood pressure is normal."
+elif systolic_pressure > 121 and systolic_pressure < 140:
+    print "Blood pressure is high."
+elif systolic_pressure > 141:
+    print "Blood pressure is very high."
+
+if heart_rate < 49:
+    print "Heart rate is low."
+elif heart_rate > 50 and heart_rate < 100:
+    print "Heart rate is normal."
+elif heart_rate > 101 and heart_rate < 140:
+    print "Heart rate is high."
+elif heart_rate >  141:
+    print "Heart rate is very high."
 
 if respiratory_rate < 5:
-	print "Respiratory rate is very low!"
+	print "Respiratory rate is very low."
 elif respiratory_rate >5 and respiratory_rate < 8:
-	print "Respiratory rate is low!"
+	print "Respiratory rate is low."
 elif respiratory_rate > 21 and respiratory_rate < 35:
-	print "Respiratory rate is high!"
+	print "Respiratory rate is high."
 elif respiratory_rate > 35:
-	print "Respiratory rate is very high!"
+	print "Respiratory rate is very high."
 else:
 	print "Respiratory rate is normal."
 
-if response_level == "0":
-	print "Patient is responsive."
-elif response_level == "1":
-	print "Patient is mildly repsonsive."
-elif response_level == "2":
-	print "Patient response is concerning."
-elif response_level == "3":
-	print "Patient response is concerning."
-elif response_level == "4":
-	print "Patient is unconscious."
+
+if urine_output < 79:
+    print "Urine output is low."
+elif urine_output > 80 and urine_output < 120:
+    print "Urine output is normal."
+elif urine_output > 121:
+    print "Urine output is high."
+
 
 ## this doesn't work right now!
 if respiratory_rate <5 and systolic_pressure <70 and heart_rate <40 and urine_output <60 and response_level == "4":

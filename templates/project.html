@@ -3,39 +3,64 @@
 <html>
   <head>
     <title>Sepsis Symptom Checker</title>
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/icons.css">
-    <link rel="stylesheet" href="../css/responsee.css">
+    <link rel="stylesheet" href="checker.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
     <h1>Sepsis Symptom Checker</h1>
-    <div id="symptom-checker">
-        <form method="post" action="/symptomchecker">
-            <label for="name">Name of patient:</label>
-                <input type="name" id="name" name="name" required="required"></br></br>
-            <label for="admission">Date of hospital admission:</label>
-                <input type="date" id="admission" name="admission" required="required"></br></br>
-            <label for="systolic_pressure">Systolic blood pressure (mmHg):</label>
-                <input type="systolic_pressure" id="systolic_pressure" name="systolic_pressure" required="required"></br></br>
-            <label for="heart_rate">Heart rate (bpm):</label>
-                <input type="heart_rate" id="heart_rate" name="heart_rate" required="required"></br></br>
-            <label for="body_temperature">Body temperature (Celsius):</label>
-                <input type="body_temperature" id="body_temperature" name="body_temperature" required="required"></br></br>
-            <label for="respiratory_rate">Respiratory rate (breaths/min):</label>
-                <input type="respiratory_rate" id="respiratory_rate" name="respiratory_rate" required="required"></br></br>
-            <label for="urine_output">Urine output (millilitres):</label>
-                <input type="urine_output" id="urine_output" name="urine_output" required="required"></br></br>
-            <label for="consciousness">Level of consciousness: </label></br>
-                <input type="radio" name="consciousness" value="Unresponsive" checked>Unresponsive<br>
-                <input type="radio" name="consciousness" value="Pain" checked>Pain<br>
-                <input type="radio" name="consciousness" value="Agitation/Confusion" checked>Agitation/Confusion</br></br>
-                <input type="radio" name="consciousness" value="Voice" checked>Voice</br></br>
-                <input type="radio" name="consciousness" value="Alert" checked>Alert</br></br>
-            <input type="submit" value="Submit" id="submit-button">
-        </form>
+      <form method="post" action="/symptomchecker" class="pure-form pure-form-stacked" id="formset">
+        <fieldset>
+          <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-1-3">
+              <label for="name"><b>Name of patient:</b></label>
+              <input type="name" id="name" name="name" required="required" placeholder="Name">
+            </div>
+
+            <div class="pure-u-1 pure-u-md-1-3">
+              <label for="admission"><b>Date of hospital admission:</b></label>
+              <input type="date" id="admission" name="admission" required="required">
+            </div>
+
+            <div class="pure-u-1 pure-u-md-1-3">
+              <label for="systolic_pressure"><b>Systolic blood pressure (mmHg):</b></label>
+              <input type="systolic_pressure" id="systolic_pressure" name="systolic_pressure" required="required">
+            </div>
+
+            <div class="pure-u-1 pure-u-md-1-3">
+              <label for="heart_rate"><b>Heart rate (bpm):</b></label>
+              <input type="heart_rate" id="heart_rate" name="heart_rate" required="required">
+            </div>
+
+            <div class="pure-u-1 pure-u-md-1-3">
+              <label for="body_temperature"><b>Body temperature (Celsius):</b></label>
+              <input type="body_temperature" id="body_temperature" name="body_temperature" required="required">
+            </div>
+
+            <div class="pure-u-1 pure-u-md-1-3">
+              <label for="respiratory_rate"><b>Respiratory rate (breaths/min):</b></label>
+              <input type="respiratory_rate" id="respiratory_rate" name="respiratory_rate" required="required">
+            </div>
+
+            <div class="pure-u-1 pure-u-md-1-3">
+              <label for="urine_output"><b>Urine output (millilitres):</b></label>
+              <input type="urine_output" id="urine_output" name="urine_output" required="required">
+            </div>
+          </div>
+
+            <label for="consciousness"><b>Level of consciousness:</b></label>
+            <select id="consciousness">
+              <option>Unresponsive</option>
+              <option>Pain</option>
+              <option>Agitation/Confusion</option>
+              <option>Voice</option>
+              <option>Alert</option>
+            </select><br><br>
+          <input type="submit" value="Submit" id="submit-button">
+        </fieldset>
+      </form>
   </div>
 
-    <img src="sepsis_table.jpg" alt="Image of Sepsis Chart">
-    </body>
+    <img src="../img/sepsis_table.JPG" alt="Image of Sepsis Chart" id="sepsis_score_chart">
+  </body>
 </html>
