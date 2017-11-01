@@ -1,4 +1,9 @@
-from flask import flask
+from flask import Flask, render_template, request
+
+app = Flask("MyApp")
+@app.route("/project")
+def input_values():
+	return render_template("project.html")
 
 systolic_pressure = int(raw_input("What is the systolic blood pressure (mmHg)? "))
 
@@ -79,3 +84,5 @@ if (systolic_pressure in range (90, 99) and consciousness == 1) or (heart_rate i
 #	print "Pateint in GOLD category"
 if (systolic_pressure <  70 and heart_rate < 40 and respiratory_rate < 5) or (respiratory_rate > 35 and heart_rate > 140):
 	print "Patient in PINK category"
+
+app.run()
