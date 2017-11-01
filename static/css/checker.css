@@ -1,0 +1,65 @@
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 3px solid #a2a2a2;
+}
+
+#radio {
+    vertical-align: middle;
+    margin: 0;
+}
+
+label {
+    vertical-align: middle;
+}
+
+#submit-button {
+    background-color: #5a5a84;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+fieldset {
+      margin: 0 0 1em 0;
+      padding: 1.5em 1.5em 0 1.5em;
+      border: #fff 3px solid;
+}
+
+form#formset {
+    width: 360px;
+    margin: 0 auto;
+}
+
+
+body {
+    font-size: 14px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(http://fonts.gstatic.com/s/opensans/v15/DXI1ORHCpsQm3Vp6mXoaTQ7aC6SjiAOpAWOKfJDfVRY.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+    background-color: #e5e5e5;
+}
+
+#sepsis_score_chart {
+  max-width: 800px;
+  max-height: 800px;
+  display: block;
+  margin: auto;
+}
