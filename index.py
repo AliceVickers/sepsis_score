@@ -10,8 +10,10 @@ def first_page():
 
 @app.route("/symptomchecker", methods=["POST"])
 def symptom_checker():
-	systolic = request.form['systolic_pressure']
-	return "ok"
+    systolic = request.form['systolic_pressure']
+    print("Systolic blood pressure is " + systolic)
+    return redirect('/symptomchecker')
+    #render_template("results.html")
 
 @app.route("/project")
 def load_thing():
